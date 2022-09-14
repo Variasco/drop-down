@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { CSSTransition } from "react-transition-group";
-import { ReactComponent as ArrowIcon } from "./icons/arrow.svg";
-import { ReactComponent as BoltIcon } from "./icons/bolt.svg";
-import { ReactComponent as ChevronIcon } from "./icons/chevron.svg";
-import { ReactComponent as CogIcon } from "./icons/cog.svg";
+import { ReactComponent as ArrowIcon } from "../icons/arrow.svg";
+import { ReactComponent as BoltIcon } from "../icons/bolt.svg";
+import { ReactComponent as ChevronIcon } from "../icons/chevron.svg";
+import { ReactComponent as CogIcon } from "../icons/cog.svg";
 
 export default function DropdownMenu() {
   const [activeMenu, setActiveMenu] = useState("main");

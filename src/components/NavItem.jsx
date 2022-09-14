@@ -11,8 +11,8 @@ export default function NavItem({ icon, children }) {
   }
 
   return (
-    <li className="nav-item">
-      <a href="/" className="icon-button" ref={containerRef} onClick={toggle}>
+    <li className="nav-item" ref={containerRef}>
+      <a href="/" className="icon-button" onClick={toggle}>
         {icon}
       </a>
       {open && children}
