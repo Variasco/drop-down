@@ -41,7 +41,7 @@ function NavItem({ icon, children }) {
 
   return (
     <li className="nav-item">
-      <a href="#" className="icon-button" onClick={toggle}>
+      <a href="/" className="icon-button" onClick={toggle}>
         {icon}
       </a>
       {open && children}
@@ -64,12 +64,13 @@ function DropdownMenu() {
   }
 
   function DropdownItem({ children, leftIcon, rightIcon, goToMenu }) {
+    function handleClick(e) {
+      e.preventDefault();
+      return goToMenu && setActiveMenu(goToMenu);
+    }
+
     return (
-      <a
-        href="#"
-        className="menu-item"
-        onClick={() => goToMenu && setActiveMenu(goToMenu)}
-      >
+      <a href="/" className="menu-item" onClick={handleClick}>
         <span className="icon-button">{leftIcon}</span>
         {children}
         <span className="icon-right">{rightIcon}</span>
